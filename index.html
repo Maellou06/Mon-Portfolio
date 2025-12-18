@@ -3,28 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link href="style.css" rel="stylesheet">
+    <title>Accueil – Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <!-- contenu de ma page -->
-    <header>
-        <h1 class="bienvenue">Bienvenue sur Mon Portfolio</h1>
-    </header>
-    <main>
-        <nav>
-            <ul type="i">
-                <li>
-                   <a href="aboutme.html", class="a_propos"> À propos de moi </a>
+    <header class="header">
+        <h1>Mon Portfolio</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="projets.html">Projets</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="projet-java.html">Combat Pokémon</a></li>
+                        <li><a href="projet-html.html">Mini-site HTML & CSS</a></li>
+                        <li><a href="projet-js.html">Interactions JavaScript</a></li>
+                        <li><a href="projet-php.html">Application PHP/MySQL</a></li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="projets.html", class="projets"> Mes projets </a>  
-                </li>
+                <li><a href="aboutme.html">À propos</a></li>
             </ul>
         </nav>
+    </header>
+
+    <main class="main-accueil">
+        <section class="hero">
+            <h2>Bienvenue sur mon portfolio</h2>
+            <p>Ce portfolio me permet de présenter mes projets réalisés au cours de ma formation et mes compétences en développement web et programmation.</p>
+            <p>Vous pourrez découvrir des projets en Java, HTML/CSS, JavaScript et PHP/MySQL, avec des explications simples sur ce que j’ai appris en les réalisant.</p>
+        </section>
+
+        <section class="about-card">
+            <h2>Pourquoi ce portfolio ?</h2>
+            <p>L’objectif de ce portfolio est de montrer concrètement ce que je sais faire, mes progrès et mon implication dans mes projets. Il sert aussi de support pour expliquer mes choix techniques et mon organisation.</p>
+            <p>C’est une manière pratique pour mes professeurs et futurs employeurs de voir mes réalisations directement, sans devoir chercher dans différents fichiers ou supports.</p>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Mon Site</p>
+
+    <footer class="footer">
+        <p>&copy; 2025 · Portfolio étudiant</p>
     </footer>
 </body>
 </html>

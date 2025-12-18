@@ -3,19 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
-    <link href="style.css" rel="stylesheet">
+    <title>Projets – Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- contenu de ma page -->
-    <header>
-        <h1 class="bienvenue">Mes projets</h1>
+    <header class="header">
+        <h1>Mes projets</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="aboutme.html">À propos</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-       
+
+    <main class="main-projets">
+        <section class="projets">
+
+            <!-- Projet Java -->
+            <article class="projet-carte">
+                <figure>
+                    <img src="images/java.png" alt="Logo Java">
+                    <figcaption>Java</figcaption>
+                </figure>
+                <h3>Combat Pokémon en Java</h3>
+                <p>J'ai développé un mini-jeu en Java qui simule un combat Pokémon. Ce projet m'a permis de mettre en pratique tout ce que j'ai appris durant l'année en BUT Informatique.</p>
+                <a href="projet-java.html" class="btn">Voir le projet</a>
+            </article>
+
+            <!-- Projet HTML/CSS -->
+            <article class="projet-carte">
+                <figure>
+                    <img src="images/html.png" alt="Logo HTML & CSS">
+                    <figcaption>HTML & CSS</figcaption>
+                </figure>
+                <h3>Mini-site HTML & CSS</h3>
+                <p>Création d'un site web statique responsive et simple. J'ai appliqué les bonnes pratiques de HTML et CSS pour un rendu propre et fonctionnel.</p>
+                <a href="projet-html.html" class="btn">Voir le projet</a>
+            </article>
+
+            <!-- Projet JavaScript -->
+            <article class="projet-carte">
+                <figure>
+                    <img src="images/javascript.webp" alt="Logo JavaScript">
+                    <figcaption>JavaScript</figcaption>
+                </figure>
+                <h3>Interactions JavaScript</h3>
+                <p>Développement d'un mini-site interactif avec boutons, formulaires dynamiques et animations simples. Ce projet m'a permis de comprendre les bases des événements en JavaScript.</p>
+                <a href="projet-js.html" class="btn">Voir le projet</a>
+            </article>
+
+            <!-- Projet PHP/MySQL -->
+            <article class="projet-carte">
+                <figure>
+                    <img src="images/php.jpg" alt="Logo PHP & MySQL">
+                    <figcaption>PHP & MySQL</figcaption>
+                </figure>
+                <h3>Application PHP/MySQL</h3>
+                <p>Application web pour gérer les ventes de jeux vidéo en France par type de jeu et année. Ce projet m'a permis de travailler sur les bases de données et les interactions serveur-client avec PHP et MySQL.</p>
+                <a href="projet-php.html" class="btn">Voir le projet</a>
+            </article>
+
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Mon Site</p>
+
+    <footer class="footer">
+        <p>&copy; 2025 · Portfolio étudiant</p>
     </footer>
 </body>
 </html>

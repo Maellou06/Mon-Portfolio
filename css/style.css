@@ -1,0 +1,319 @@
+/* ==========================
+   RESET & STYLES GÉNÉRAUX
+   ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #222;
+    line-height: 1.5;
+    background: linear-gradient(135deg, #e8f0ff 0%, #f9fcff 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================
+   HEADER
+   ========================== */
+header.header {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    background: linear-gradient(135deg, #0073e6, #004a99);
+    border-bottom: 2px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+header.header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.25);
+}
+
+/* Navigation principale */
+header.header nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    margin-top: 10px;
+}
+
+header.header nav a {
+    text-decoration: none;
+    color: #bfc5cb;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+header.header nav a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+/* ==========================
+   DROPDOWN MENU
+   ========================== */
+.nav .dropdown {
+    position: relative;
+}
+
+.nav .dropdown > a {
+    display: inline-block;
+}
+
+.nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #0073e6;
+    border-radius: 6px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.nav .dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.nav .dropdown-menu li a:hover {
+    background-color: #005bb5;
+}
+
+.nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav ul, .nav li {
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================
+   MAIN
+   ========================== */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    flex: 1;
+}
+
+main h2, main h3 {
+    color: #1e3a5f;
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   SECTIONS CARTE / CONTENT
+   ========================== */
+section, .about-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 25%, #d0f0ff 50%, #f0f8ff 75%, #ffffff 100%);
+    background-size: 300% 300%;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+section:hover, .about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    animation: gradientMove 3s linear infinite;
+}
+
+/* Paragraphes */
+section p, .about-card p {
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* Listes */
+section ul, .about-card ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+section li, .about-card li {
+    margin-bottom: 6px;
+}
+
+/* Liens */
+section a, .about-card a {
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+section a:hover, .about-card a:hover {
+    color: #004a99;
+    text-decoration: underline;
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* ==========================
+   PROJETS (cartes)
+   ========================== */
+.projets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.projets>article {
+    flex: 0 1 220px;
+    padding: 15px;
+    text-align: left;
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 25%, #d0f0ff 50%, #f0f8ff 75%, #ffffff 100%);
+    background-size: 300% 300%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projets>article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    animation: gradientMove 3s linear infinite;
+}
+
+.projets figure img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projets figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.projets figure figcaption {
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+}
+
+/* ==========================
+   ANIMATIONS
+   ========================== */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+footer.footer {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    background: linear-gradient(135deg, #1e3a5f, #0a2340, #224c80, #162d50);
+    background-size: 200% 200%;
+    transition: background-position 0.5s ease;
+}
+
+footer.footer:hover {
+    background-position: right bottom;
+}
+
+/* ==========================
+   NAVIGATION INTERNE (optionnelle)
+   ========================== */
+main nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    margin: 20px 0;
+}
+
+main nav a {
+    display: inline-block;
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #0073e6;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+}
+
+main nav a:hover {
+    background: linear-gradient(135deg, #0073e6, #00a2ff);
+    transform: translateY(-3px) scale(1.05);
+}
+
+main nav a:focus {
+    outline: 3px solid #005bb5;
+    outline-offset: 2px;
+}
+
+/* ==========================
+   IMAGES DES PROJETS
+   ========================== */
+.main-projet figure img {
+    width: 100%;      /* s’adapte à la largeur du conteneur */
+    max-width: 400px; /* taille maximale pour éviter que ce soit trop grand */
+    height: auto;     /* conserve les proportions */
+    display: block;
+    margin: 0 auto 15px auto; /* centre l’image avec un petit espace en dessous */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-projet figure img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.main-projet figure figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+}
